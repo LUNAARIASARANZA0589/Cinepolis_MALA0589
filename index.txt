@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!--Luna Arias Meredith Aranza — 0589 -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cinépolito</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: #F5F3EF;
+      color: #4A4A52;
+    }
+
+    header, footer {
+      background: #8FA3B8;
+      color: #FFFFFF;
+      padding: 16px 30px;
+    }
+
+    nav {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    a {
+      color: #FFFFFF;
+      text-decoration: none;
+    }
+
+    .logo {
+      font-size: 22px;
+      font-weight: 600;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      font-size: 14px;
+    }
+
+    .banner {
+      background: #F2E6C9;
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    .banner h1 {
+      font-size: 26px;
+      margin-bottom: 8px;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 30px auto;
+      padding: 0 20px;
+    }
+
+    .titulo-seccion {
+      font-size: 20px;
+      margin-bottom: 15px;
+      color: #6F829A;
+    }
+
+    .grid-peliculas {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-bottom: 40px;
+    }
+
+    .card-pelicula, .box-auth, .seccion-club {
+      background: #FFFFFF;
+      border-radius: 10px;
+      padding: 20px;
+    }
+
+    .card-pelicula {
+      width: calc(50% - 10px);
+    }
+
+    .imagen-placeholder {
+      background: #E3D5E8;
+      height: 120px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 12px;
+      font-size: 14px;
+    }
+
+    .card-pelicula h3 {
+      font-size: 16px;
+      margin-bottom: 5px;
+    }
+
+    .card-pelicula p {
+      font-size: 13px;
+      margin-bottom: 8px;
+    }
+
+    .info-extra {
+      display: inline-block;
+      background: #F2E6C9;
+      font-size: 12px;
+      padding: 3px 10px;
+      border-radius: 6px;
+    }
+
+    .seccion-club {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .seccion-club h2 {
+      font-size: 18px;
+      margin-bottom: 8px;
+    }
+
+    .seccion-club p {
+      font-size: 13px;
+      margin-bottom: 15px;
+    }
+
+    .form-simple {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    input {
+      padding: 8px 12px;
+      border: 1px solid #DDD8D0;
+      border-radius: 6px;
+      font-size: 14px;
+    }
+
+    button {
+      background: #8FA3B8;
+      color: #FFFFFF;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    .seccion-auth {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-bottom: 40px;
+    }
+
+    .box-auth {
+      flex: 1;
+      min-width: 250px;
+    }
+
+    .box-auth h3 {
+      font-size: 16px;
+      margin-bottom: 15px;
+      text-align: center;
+    }
+
+    .campo {
+      margin-bottom: 12px;
+    }
+
+    .campo label {
+      display: block;
+      font-size: 12px;
+      margin-bottom: 4px;
+    }
+
+    .campo input, .btn-full {
+      width: 100%;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 12px;
+    }
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <a href="#" class="logo">Cinépolito ദ്ദി(˵ •̀ ᴗ - ˵ ) ✧</a>
+      <ul class="nav-links">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#club">Club Cinépolito</a></li>
+	<!--Aquí hago referencia a mis propias secciones para poder acceder a ellas como si se tratasen de links externos. -->
+      </ul>
+    </nav>
+  </header>
+
+  <section id="inicio" class="banner">
+  <!--En lugar de usar únicamente divs, almaceno todo dentro de secciones, así puedo asignarles un ID para llamarlas después.-->
+    <h1>Bienvenido a Cinépolito (˶ᵔ ᵕ ᵔ˶) </h1>
+    <p>Consulta la cartelera para que te enteres de los próximos estrenos. ≽(•⩊ •マ≼</p>
+  </section>
+
+  <div class="container">
+
+    <h2 id="cartelera" class="titulo-seccion">En Cartelera ( ˶°ㅁ°) !!</h2>
+    <div class="grid-peliculas">
+
+      <div class="card-pelicula">
+        <img src="https://i.pinimg.com/736x/68/55/cf/6855cfec14af1954168cb66b0b58e415.jpg" width="200", height="300">
+        <h3>Jojo´s — Golden Wind / Vento Aureo</h3>
+        <p>Género: Animación</p>
+        <span class="info-extra">Horario: 16:00 | 19:30</span>
+	<!--Uso esta etiqueta de span para poder alterar ciertas partes de la página mediante el style, pero sin que la estrutura central se vea comprometida.-->
+      </div>
+
+      <div class="card-pelicula">
+        <img src="https://i.pinimg.com/1200x/64/9e/7c/649e7c00d7d185633aba0d788e0a1455.jpg" width="200", height="300">
+        <h3>Jojo´s — Battle Tendency </h3>
+        <p>Género: Animación</p>
+        <span class="info-extra">Horario: 14:00 | 17:15</span>
+      </div>
+
+    </div>
+
+    <h2 id="estrenos" class="titulo-seccion">Próximos Estrenos (,,>ヮ<,,)</h2>
+    <div class="grid-peliculas">
+
+      <div class="card-pelicula">
+        <img src="https://i.pinimg.com/1200x/c3/bc/56/c3bc5655d33dbc971dc13d5fb3cd1f88.jpg" width="200", height="300">
+        <h3>Jojo´s — Stardust Crusaders </h3>
+        <p>Género: Animación</p>
+        <span class="info-extra">Estreno: Próximamente</span>
+      </div>
+
+      <div class="card-pelicula">
+        <img src="https://m.media-amazon.com/images/I/81W7ierlxGL._SY385_.jpg" width="200", height="300">
+        <h3>Steel Ball Run</h3>
+        <p>Género: Animación </p>
+        <span class="info-extra">Estreno: Próximamente</span>
+      </div>
+
+    </div>
+
+    <section id="club" class="seccion-club">
+      <h2>Ingresar Tarjeta Club Cinépolito („• ֊ •„)</h2>
+      <p>Introduce los números de tu tarjeta para consultar tus beneficios:</p>
+      <!--Aquí para simular un pequeño recuadro para ingresar uso un form simple de input, porque se supone que esa información debe guardarse, no como una búsqueda. -->
+      <form class="form-simple" action="#">
+        <input type="text" placeholder="Número de Tarjeta" maxlength="16">
+        <button type="button">Ingresar</button>
+      </form>
+    </section>
+
+    <h2 class="titulo-seccion">Acceso a Tu Cuenta （˶•̀ ᎑-˶）</h2>
+    <div class="seccion-auth">
+
+      <div class="box-auth">
+        <h3>Iniciar Sesión 𑣲𝄞</h3>
+	<!--Los formularios no tienen action, no están conectados a ningún lado y por ende, no son realmente funcionales. -->
+        <form action="#">
+          <div class="campo">
+            <label>Correo Electrónico:</label>
+            <input type="email" placeholder="correo@ejemplo.com">
+          </div>
+          <div class="campo">
+            <label>Contraseña:</label>
+            <input type="password" placeholder="••••••••">
+          </div>
+          <button type="button" class="btn-full">Entrar</button>
+        </form>
+      </div>
+
+      <div class="box-auth">
+        <h3>Registro 𑣲𝄞</h3>
+        <form action="#">
+          <div class="campo">
+            <label>Nombre:</label>
+            <input type="text" placeholder="Tu Nombre">
+          </div>
+          <div class="campo">
+            <label>Correo Electrónico:</label>
+            <input type="email" placeholder="correo@ejemplo.com">
+          </div>
+          <div class="campo">
+            <label>Contraseña:</label>
+            <input type="password" placeholder="••••••••">
+          </div>
+          <button type="button" class="btn-full">Crear Cuenta</button>
+        </form>
+      </div>
+
+    </div>
+
+  </div>
+
+  <footer>
+    <p><strong>Cinépolito</strong> - Luna Arias Meredith Aranza </p>
+    <p>5-I — 0589</p>
+  </footer>
+
+</body>
+</html>
